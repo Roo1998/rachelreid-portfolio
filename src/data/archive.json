@@ -1,0 +1,1179 @@
+{
+  "gp-booking-service": [
+    {
+      "type": "text",
+      "lines": [
+        "Recently, I was asked to design the booking system for a hypothetical GP surgery.  This project was done in less than 24 hours and was a good way for me to practice my skills in Figma."
+      ]
+    },
+    {
+      "type": "embed",
+      "src": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FhMOnHuzMgQV61Rf76xAiDB%2FCHS---DDP%3Fpage-id%3D13%253A1017%26node-id%3D15%253A1019%26starting-point-node-id%3D15%253A1019"
+    },
+    {
+      "type": "embed",
+      "src": "https://www.loom.com/embed/c6cf7e6402944df18a3e9c18a5294213"
+    },
+    {
+      "type": "embed",
+      "src": "https://www.loom.com/embed/2a31959e6d7f40b9baaa1ea9780e3d06"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/gp-booking-service/01.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/gp-booking-service/02.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/gp-booking-service/03.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/gp-booking-service/04.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/gp-booking-service/05.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/gp-booking-service/06.jpg"
+    }
+  ],
+  "honours-project-walkthrough": [
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/01.jpg"
+    },
+    {
+      "type": "text",
+      "lines": [
+        "'Walkthrough' is an interactive audio guide for museums, designed for people who have a sensory processing disorder (SPD), with the aim of reducing the risk of sensory overload.",
+        "'Walkthrough' works by registering for a card, which is brought every time while visiting a museum. Users tap their card on the readers next to the exhibits and it will give audio information to the user's personal Bluetooth headphones.  The content and amount of information given to the user will vary based on age, disabilities, and language preferences."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/02.jpg"
+    },
+    {
+      "type": "embed",
+      "src": "https://www-ccv.adobe.io/v1/player/ccv/54Zs8sj6HNb/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "A video of how 'Walkthrough' works"
+      ]
+    },
+    {
+      "type": "text",
+      "lines": [
+        "Images from ProductXInteraction Degree Show 2022"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/03.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/04.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/05.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/06.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/07.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/08.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/09.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/10.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/11.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/12.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/13.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/14.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/15.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/16.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/17.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/18.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/19.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/20.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/21.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/22.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/23.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/24.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/25.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/26.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/27.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/28.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/29.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/30.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/31.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/32.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/33.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/34.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/35.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/36.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/37.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/38.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/honours-project-walkthrough/39.jpg"
+    }
+  ],
+  "uofg-life-app": [
+    {
+      "type": "embed",
+      "src": "//invis.io/V412KBWXMTPC"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "This was the prototype made, please interact at your leisure!"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/uofg-life-app/01.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/uofg-life-app/02.jpg"
+    }
+  ],
+  "social-mobile-apps": [
+    {
+      "type": "text",
+      "lines": [
+        "Brief 1: We had to pick a user and design a social app for them to fill a gap in the market.  I designed a chat-bot system to try and encourage people to shop more locally."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/01.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Research Board 1"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/02.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Research Board 2"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/03.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Research Board 3"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/04.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Research Board 4"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/05.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Proposal Board 1"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/06.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Proposal Board 2"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/07.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Proposal Board 3"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/08.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Proposal Board 4"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/09.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Proposal Board 5"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/10.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Proposal Board 6"
+      ]
+    },
+    {
+      "type": "text",
+      "lines": [
+        "Brief 2: We had to design an application for an Apple Watch, with a twist on time.  My partner and I designed an application for friends or partners who are in different time zones for a way for them to sync up for phone calls."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/11.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/12.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/13.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/14.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/15.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/16.jpg"
+    },
+    {
+      "type": "embed",
+      "src": "https://player.vimeo.com/video/543950537?h=39d3e50e5a&badge=0&autopause=0&player_id=0&app_id=58479"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "When Worlds Align working video"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/social-mobile-apps/17.jpg"
+    }
+  ],
+  "design-enterprise-pt1": [
+    {
+      "type": "text",
+      "lines": [
+        "Project One: We split ourselves into teams mixed with different disciplines.  Our team included: Digital Interaction Design, Interior Design, Graphic Design, and Textile Design.  We were to analyse an existing company and break down its business strategies and plans.  We then had to look into any improvements that could be made for the company.  We chose 'Clothes Doctor', a clothing repair service and clothing maintenance provider."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/01.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "A link to our chosen company's website:  https://clothes-doctor.com/?campaignid=14238557219&adgroupid=123074167622&adid=538455796704&gclid=CjwKCAiAp8iMBhAqEiwAJb94z3w4yZBIvwQw2MOiEfG-fmH8uk1PeW_Xjipk3UnLXNLVTe_r2EiH2xoCaT8QAvD_BwE"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/02.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Description of the services already provided by Clothes Doctor"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/03.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "A detailed look at the company."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/04.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Personas and user journeys of consumers who may be likely to use Clothes Doctor and their services."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/05.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "A detailed look at some personas and user journeys, and their pros and cons about clothes doctor."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/06.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "A brainstorm of issues, themes, suggestions, and similar competitors."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/07.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Our take on their current business model canvas."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/08.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Our design brief to improve their services."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/09.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "This was a storyboard I did introducing our first idea for clothes doctor; where you exchanged clothes based on their value with the company to reduce the amount of new clothes being purchased and therefore fighting against fast fashion."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/10.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Pros and Cons of Idea 1"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/11.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Storyboard introducing Idea 2: someone who's hobby is something like sewing would lead classes on it to earn a bit of extra cash and help others."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/12.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Pros and cons of idea 2."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/13.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Storyboard on idea 3: Group tutorials so each tutorial isn't as expensive as a one-on-one."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/14.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Pros and Con's of idea 3."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/design-enterprise-pt1/15.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Exploring group tutorials in more detail."
+      ]
+    }
+  ],
+  "paper": [
+    {
+      "type": "image",
+      "src": "/images/archive/paper/01.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "In a mini-project, using newspaper we created a face mask as this was the first time we had come back to university after the first lockdown in Scotland."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/paper/02.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "We were to form groups based on designs of paper that inspired us.  This was our call for company!  We then expanded on our interests by creating an imaginary article for Domos Magazine."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/paper/03.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/paper/04.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/paper/05.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/paper/06.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "A brand our team created with our 'ideal workspace'"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/paper/07.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/paper/08.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/paper/09.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/paper/10.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Based on the interests of everyone in the company, we designed a sculpture of a dress, reading allowed a message of fast fashion on the walls around it."
+      ]
+    },
+    {
+      "type": "embed",
+      "src": "https://player.vimeo.com/video/645401864?h=54698ea2f7&badge=0&autopause=0&player_id=0&app_id=58479"
+    }
+  ],
+  "prototyping-for-digital-futures": [
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/01.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/02.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/03.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/04.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/05.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/06.jpg"
+    },
+    {
+      "type": "embed",
+      "src": "https://player.vimeo.com/video/645395037?h=9a7216ff1b&badge=0&autopause=0&player_id=0&app_id=58479"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Demonstration Video of the final prototype.  Due to COVID-19 and a new lockdown across the country, we had to make this film instead of demonstrating our experience prototypes in an exhibition.  So please excuse my living room!"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/07.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/08.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/09.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/10.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/11.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/12.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/13.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/14.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/15.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/16.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/17.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/18.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/prototyping-for-digital-futures/19.jpg"
+    }
+  ],
+  "designing-social-networks": [
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/01.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/02.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/03.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/04.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/05.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/06.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/07.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/08.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/09.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/10.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "There were three main sections of the app.  This wireframe depicted one of them: contact. Where someone suffering from bereavement could contact a professional."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/11.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "This wireframe depicted how people who knew the deceased would be able to upload and share memories of the deceased."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/12.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "This wireframe shows how you would create a profile page for your loved one."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/13.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/14.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/15.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/16.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/17.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/18.jpg"
+    },
+    {
+      "type": "embed",
+      "src": "https://player.vimeo.com/video/645383469?h=4e457a9e9e&badge=0&autopause=0&player_id=0&app_id=58479"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "This was a prototype that I tested with some potential users to highlight any issues they came across while using the app."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/19.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/20.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/21.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/22.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/23.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/24.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/25.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/26.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/27.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/28.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/29.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/30.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/31.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/32.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/33.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/34.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/designing-social-networks/35.jpg"
+    },
+    {
+      "type": "embed",
+      "src": "https://player.vimeo.com/video/645390126?h=466965aede&badge=0&autopause=0&player_id=0&app_id=58479"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "A demo of our design after we attempted to code it for the first time."
+      ]
+    }
+  ],
+  "the-nature-of-disconnect": [
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/01.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/02.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/03.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/04.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Concept Storyboard"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/05.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Logo Design Concept"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/06.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Visual Langauge Board"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/07.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/08.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/09.jpg"
+    },
+    {
+      "type": "embed",
+      "src": "https://player.vimeo.com/video/645363392?h=91bac0e532&badge=0&autopause=0&player_id=0&app_id=58479"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "This was the final experience prototype for my final first-year project"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/10.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/11.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/12.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/13.jpg"
+    },
+    {
+      "type": "caption",
+      "lines": [
+        "Unsuccessful Logo Designs"
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/14.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/15.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/16.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/17.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/18.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/19.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/20.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/21.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/22.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/23.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/24.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/25.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/26.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/27.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/28.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/the-nature-of-disconnect/29.jpg"
+    },
+    {
+      "type": "embed",
+      "src": "https://player.vimeo.com/video/645379940?h=f19993dbe7&badge=0&autopause=0&player_id=0&app_id=58479"
+    }
+  ],
+  "early-work": [
+    {
+      "type": "text",
+      "lines": [
+        "This was my final year assessment for my product design module in high school.  We had to create educational outdoor seating.  I completed it in May 2016.  I received 69/70 marks for this project."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/01.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/02.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/03.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/04.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/05.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/06.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/07.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/08.jpg"
+    },
+    {
+      "type": "text",
+      "lines": [
+        "This was a brief look into a final project I did at Glasgow School of Art.  It was to design a machine or mechanism for a ball to fall down and for us to watch it.  I used a variety of my designs in one large machine."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/09.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/10.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/11.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/12.jpg"
+    },
+    {
+      "type": "text",
+      "lines": [
+        "An unfinished project when designing a new chair for a wealthy dentist - brainstorming and mood and lifestyle boards."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/13.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/14.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/15.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/16.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/17.jpg"
+    },
+    {
+      "type": "text",
+      "lines": [
+        "Bellow is a Poster for a project I did at the S@S Accelerate Program at Strathclyde university when I was 15 years old.  I designed an MP3 player for multiple different disabilities.  It won an award at the end of the program."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/18.jpg"
+    },
+    {
+      "type": "text",
+      "lines": [
+        "A selection of art from my art and design class in high school."
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/19.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/20.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/21.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/22.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/23.jpg"
+    },
+    {
+      "type": "image",
+      "src": "/images/archive/early-work/24.jpg"
+    }
+  ]
+}

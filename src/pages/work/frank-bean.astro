@@ -1,0 +1,112 @@
+---
+import CaseStudy from "../../layouts/CaseStudy.astro";
+---
+
+<CaseStudy
+  title="Rebuilding a family gift shop with Claude Code"
+  summary="My dad's laser-engraving business had great reviews on Etsy but almost no sales on its own website. I audited the store, proposed fixes, and shipped them with Claude Code in about a week."
+  role="Audit, design and build (freelance)"
+  team="Me, with the owner, Frank, approving"
+  timeline="October 2026, about a week"
+  tools="Claude Code, Claude artifacts, Shopify, Etsy and eBay APIs"
+  outcome="49 audit items, 191 products rewritten and tagged, a new menu, filters and collections, Etsy reviews on the website, and a consistent, accessible theme. Bugs and quick wins went live on day one."
+  hero={{ src: "/images/fb-home-desktop.jpg", alt: "Before and after of the Frank Bean Market homepage on desktop. Before: a gradient header with a large logo and a crowded menu. After: a cleaner header with the logo and name centred, a trust bar and a clearer menu." }}
+  next={{ href: "/work/mobile", title: "Taking a desktop-only platform mobile" }}
+>
+  <section>
+    <h2>The problem</h2>
+    <div>
+      <p><a href="https://frankbeanmarket.com/">Frank Bean Market</a> makes laser-cut and laser-engraved gifts in a UK workshop and sells on Shopify, Etsy and eBay. On Etsy it has more than 800 five-star ratings. Its own website, where Frank keeps more of each sale, barely sold anything, even after he hired a freelance marketer. In the 90 days before the redesign it had 522 visits and 6 orders, a 0.95% conversion rate.</p>
+      <p>When I looked at the site, I saw why visitors might leave: bugs, inconsistent UI, confusing navigation and none of the social proof he'd earned on Etsy. I offered to audit it and fix what I found.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>How I worked</h2>
+    <div>
+      <ol>
+        <li><strong>Audit.</strong> With Claude, I reviewed the whole store and logged 49 issues: bugs, quick wins and design decisions, each with a before and after picture.</li>
+        <li><strong>Propose in artifacts.</strong> I presented every proposal to Frank as an interactive Claude artifact. He could approve, reject or edit each item directly, and his changes were saved for me to act on.</li>
+        <li><strong>Agree the rules.</strong> Frank let me ship bugs and quick wins straight away, but kept the final say on product decisions like titles, prices and descriptions.</li>
+        <li><strong>Build with Claude Code.</strong> I set up developer access to Shopify, Etsy and eBay so Claude Code could make changes safely: bulk edits ran as scripts with a backup and a dry run first, and design changes went into a draft theme before going live.</li>
+      </ol>
+      <p class="callout">The whole project ran on Claude: a hub artifact tracked every page, decision and approval, so Frank always knew what was waiting on him.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key changes</h2>
+    <div>
+      <h3>Show the trust he'd already earned</h3>
+      <p>The website's review box said "Be the first to write a review", in bright yellow, while Etsy held 168 reviews averaging 4.99 stars. I brought the Etsy reviews onto the website and restyled them in the brand's colours.</p>
+    </div>
+    <figure>
+      <img src="/images/fb-reviews.jpg" alt="Before: an empty yellow review box saying be the first to write a review. After: a purple review summary showing 4.99 out of 5 from 168 reviews." loading="lazy" />
+      <figcaption>Before: an empty review box. After: 168 Etsy reviews, on brand.</figcaption>
+    </figure>
+    <div>
+      <h3>One consistent, accessible theme</h3>
+      <p>Buttons, colours, fonts and spacing varied from page to page. I moved the store onto one set of styles, tidied the header and logo, and ran accessibility checks on contrast, labels and tap targets. I also fixed a menu that closed the moment you tapped it on a phone.</p>
+    </div>
+    <figure>
+      <img src="/images/fb-product.jpg" alt="Before and after of a product page. After: consistent option buttons, a brand-coloured Add to Cart button and a tidier layout." loading="lazy" />
+      <figcaption>The product page, before and after: consistent buttons, clearer options and a stronger call to action.</figcaption>
+    </figure>
+    <div>
+      <h3>Shop the way people buy gifts</h3>
+      <p>People shop for an occasion or a person's interests, not a product type. The new menu offers Shop by Product, Shop by Occasion and Shop by Interest, backed by 11 occasion collections and four filters. I rewrote and tagged all 191 products, with alt text, so the filters work.</p>
+    </div>
+    <figure>
+      <img src="/images/fb-collection.jpg" alt="Before and after of a collection page with clearer filters, product titles and star ratings on each card." loading="lazy" />
+      <figcaption>Collections now have filters for product type, interest, occasion and personalisation, shorter titles and star ratings.</figcaption>
+    </figure>
+    <div>
+      <h3>Fix the details that cost sales</h3>
+      <ul>
+        <li>Branded checkout with the full logo instead of a faint mark</li>
+        <li>A clear "how personalisation works" section, and a longer engraving text box</li>
+        <li>Duplicate prices and empty labels removed</li>
+        <li>Inconsistent pricing across Shopify, Etsy and eBay flagged, with a pricing plan for Frank to decide on</li>
+        <li>Shorter, clearer product titles and descriptions across every channel</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="/images/fb-home-mobile.jpg" alt="Before and after of the homepage on a phone. After: a trust bar, a clear headline, a short description and a Shop All Gifts button." loading="lazy" />
+      <figcaption>On a phone: a clear headline and one obvious next step.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>What Frank said</h2>
+    <div>
+      <p class="callout">“Rachel spotted problems with my store I’d never have found, and fixed them in a week.”<br /><span style="font-size:0.9375rem">Frank, owner, Frank Bean Market</span></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Beyond the website</h2>
+    <div>
+      <p>I also aligned the Etsy and eBay shops with the website: consistent titles, details and categories. I wrote a growth plan covering every sales channel, and a checklist for Frank's conversations with his marketer, so he could judge the work he was paying for.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Where it stands</h2>
+    <div>
+      <p>Bugs and quick wins went live on the first day. The bigger redesign is in a draft theme, ready for Frank to publish.</p>
+      <div class="stats">
+        <div class="stat"><strong>522</strong><span>visits in the 90 days before</span></div>
+        <div class="stat"><strong>0.95%</strong><span>conversion rate (6 orders)</span></div>
+        <div class="stat"><strong>4.2%</strong><span>of visits added to cart</span></div>
+      </div>
+      <p>That's the baseline. I'll compare the same figures once the redesign has been live for a month.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I learned</h2>
+    <div>
+      <p>Presenting decisions as interactive artifacts changed how a non-designer could take part. Frank didn't need to read a report or learn a tool. He ticked, edited and approved, and Claude Code built exactly what he agreed to.</p>
+    </div>
+  </section>
+</CaseStudy>

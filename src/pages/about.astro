@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+
+const tools = ["Claude Code", "React", "MUI", "Material 3", "Storybook", "Figma", "Shopify", "Git and GitHub", "WCAG 2.1 AA"];
+---
+
+<Base title="About | Rachel Reid">
+  <section class="container about">
+    <div class="intro">
+      <p class="eyebrow">About</p>
+      <h1>Designer first. <span class="serif">I build with Claude Code.</span></h1>
+    </div>
+    <div class="body">
+      <p>I'm Rachel Reid, a product designer based in Glasgow. I studied Digital Interaction Design at the University of Dundee and joined a fintech startup in 2022 as an early design hire, working through to Series A. I work with international clients, including lenders in the US, and run research sessions with them remotely.</p>
+      <p>There I created the design system from scratch on MUI and Material 3, made it WCAG compliant, and I'm now leading the migration of the live app onto it. I design and ship new features end to end, open my own pull requests, and review every PR that touches UI across the team. Right now I'm working on a borrower dashboard, a groups feature and a refactor of how document requests work, all at once.</p>
+      <p>I worked in Figma from 2022, and since the end of 2025 I've designed directly in code. Claude Code is part of how I work every day: I prototype on the real design system, turn concepts and demos around in a day or less, write the commands my developers use to check front-end quality, and ship UI to production. I stay on the front end and partner with engineers on the back end.</p>
+      <p>Outside my day job I recently rebuilt my family's laser-engraving gift shop with Claude Code, from audit to production.</p>
+
+      <h2>Tools</h2>
+      <ul class="tools">{tools.map((t) => <li class="tag">{t}</li>)}</ul>
+
+      <h2>Get in touch</h2>
+      <p>Email me at <a href="mailto:rachel.myinbox@gmail.com">rachel.myinbox@gmail.com</a> or find me on <a href="https://www.linkedin.com/in/rachel-reid-406559229/">LinkedIn</a>.</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .about { padding-top: var(--s-9); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: var(--s-8); }
+  .intro h1 { margin-top: var(--s-4); }
+  .intro .serif { display: block; font-style: italic; font-weight: 400; color: var(--ink-3); }
+  .body { display: grid; gap: var(--s-4); max-width: var(--measure); font-size: 1.0625rem; }
+  .body h2 { font-size: 1.125rem; margin-top: var(--s-5); }
+  .tools { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: var(--s-2); }
+  @media (max-width: 860px) { .about { grid-template-columns: 1fr; gap: var(--s-5); } }
+</style>

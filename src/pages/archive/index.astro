@@ -1,0 +1,44 @@
+---
+import Base from "../../layouts/Base.astro";
+import { projects } from "../../data/archive-projects";
+---
+
+<Base title="Archive | Rachel Reid" description="Earlier and student work by Rachel Reid, from the University of Dundee and before.">
+  <section class="container archive">
+    <p class="eyebrow">Archive</p>
+    <h1>Earlier work</h1>
+    <p class="lede">Projects from my Digital Interaction Design degree at the University of Dundee, and a little from before. For my current work, see the <a href="/">case studies</a>.</p>
+
+    <ul class="grid">
+      {projects.map((p) => (
+        <li class="item"><a href={`/archive/${p.slug}`}>
+          <div class="media"><img src={`/images/archive/${p.img}`} alt="" loading="lazy" /></div>
+          <div class="body">
+            <h2>{p.title}</h2>
+            <p class="year">{p.year}</p>
+            <p>{p.body}</p>
+          </div>
+        </a></li>
+      ))}
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .archive { padding-top: var(--s-9); }
+  .archive h1 { margin-top: var(--s-3); }
+  .lede { margin-top: var(--s-4); max-width: 56ch; font-size: 1.125rem; }
+  .grid { list-style: none; padding: 0; margin: var(--s-7) 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-6) var(--s-5); }
+  .item a { display: grid; gap: var(--s-3); align-content: start; color: inherit; text-decoration: none; }
+  .item a:hover h2 { color: var(--accent); text-decoration: underline; }
+  .item a:hover .media img { transform: scale(1.02); }
+  .media img { transition: transform .3s; }
+  .media { aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+  .media img { width: 100%; height: 100%; object-fit: cover; }
+  .body { display: grid; gap: var(--s-1); }
+  .body h2 { font-size: 1.0625rem; }
+  .year { font-size: 0.875rem; color: var(--ink-3); }
+  .body p:not(.year) { font-size: 0.9375rem; }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+</style>

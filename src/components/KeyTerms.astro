@@ -1,0 +1,28 @@
+---
+const terms = [
+  { term: "Review", def: "A regular check, usually yearly, where the lender confirms a borrower is still meeting the terms of their loan." },
+  { term: "Request", def: "Asking the borrower for a specific document a review needs, like a tax return or rent roll." },
+  { term: "Covenant", def: "A condition in the loan agreement the borrower must keep to, such as a minimum ratio of income to debt payments." },
+  { term: "Member", def: "The borrower. Our clients include credit unions, which call their customers members." },
+];
+---
+
+<aside class="key-terms" aria-labelledby="key-terms-heading">
+  <h2 id="key-terms-heading" class="eyebrow">Key terms</h2>
+  <dl>
+    {terms.map((t) => (
+      <div>
+        <dt>{t.term}</dt>
+        <dd>{t.def}</dd>
+      </div>
+    ))}
+  </dl>
+</aside>
+
+<style>
+  .key-terms { grid-column: 1 / -1; margin: var(--s-7) 0 0; padding: var(--s-5); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+  .key-terms h2 { font-size: 0.8125rem; position: static; }
+  dl { margin: var(--s-4) 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--s-4) var(--s-5); }
+  dt { font-weight: 650; color: var(--ink); }
+  dd { margin: var(--s-1) 0 0; font-size: 0.9375rem; color: var(--ink-2); }
+</style>

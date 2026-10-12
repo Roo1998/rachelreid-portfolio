@@ -1,0 +1,95 @@
+---
+import CaseStudy from "../../layouts/CaseStudy.astro";
+
+const borrower = [
+  ["Explicit mobile layouts", 16],
+  ["Responsive layout only", 3],
+  ["Desktop only", 1],
+];
+---
+
+<CaseStudy
+  title="Taking a desktop-only platform mobile"
+  summary="Our lending platform was designed for desktop. Lenders work at desks, but their borrowers live on their phones. I'm making it work on mobile, borrowers first, by building responsiveness into every component as I migrate the app."
+  role="Design and front-end build"
+  team="Design system and product engineers"
+  timeline="February 2026 – present"
+  tools="Claude Code, design system, Storybook"
+  outcome="95% of borrower pages and 85% of lender pages now have responsive layouts. The only gaps left on the lender side are admin setup screens used once, at a desk. I wrote 77% of the mobile work."
+  hero={{ src: "/images/mobile-before-after.png", alt: "The same Leads screen on a phone, before and after. Before: a desktop table squashed to phone width, with columns cut off and text squeezed. After: a stacked list with one card per lead, labelled fields and a sort chip." }}
+  next={{ href: "/work/design-system", title: "An accessible design system, designed in code" }}
+>
+  <section>
+    <h2>The problem</h2>
+    <div>
+      <p>Almost everyone uses their phone first now. Our customers, the lenders, mostly work on desktop, but their members, the borrowers, don't. They were filling in loan applications and uploading documents on screens the product was never designed for.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Results so far</h2>
+    <div>
+      <div class="stats">
+        <div class="stat"><strong>95%</strong><span>of borrower pages responsive</span></div>
+        <div class="stat"><strong>85%</strong><span>of lender pages responsive</span></div>
+        <div class="stat"><strong>48px</strong><span>touch targets by default across the system</span></div>
+        <div class="stat"><strong>77%</strong><span>of the mobile work written by me</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The approach: build it into the system</h2>
+    <div>
+      <p>Rather than redesign pages one by one for mobile, I made responsiveness part of the design system from its first component in February 2026. As I redesign each component during the migration, I make it responsive, so a migrated screen usually works on a phone with only small adjustments.</p>
+      <p>Today 53 of the 119 components have mobile-specific behaviour, and 45 of the 146 Storybook files test a mobile view. A written team rule backs it up: every UI change must work on mobile, horizontal layouts stack on small screens by default, and breakpoints come from the theme, never hard-coded widths.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key patterns</h2>
+    <div>
+      <h3>Touch targets by default</h3>
+      <p>Buttons, checkboxes, switches, chips and links grow to a 48px minimum target on small screens. It's on by default, so accessibility on mobile doesn't depend on anyone remembering to turn it on.</p>
+      <h3>Tables that stop being tables</h3>
+      <p>Data tables don't work on a phone. Seven purpose-built mobile lists replace tables below the breakpoint, for leads, requests, users, invites and reporting, and more components switch a table for a list or restack a row.</p>
+      <h3>Overlays become bottom sheets</h3>
+      <p>Dialogs and modals become bottom sheets on small screens, with the primary action placed where a thumb can reach it. Navigation drawers keep a strip of the page visible, so tapping outside still closes them.</p>
+      <h3>Long flows that stay readable</h3>
+      <p>Multi-step forms collapse their progress dots into "Step 2 of 5", section actions stack under their titles instead of being squashed beside them, and timelines turn vertical.</p>
+    </div>
+    <figure>
+      <div class="phones">
+        <img src="/images/mobile-navigation.png" alt="Mobile navigation drawer open, listing every destination with the current page highlighted, and help, notifications and log out pinned to the bottom." loading="lazy" />
+        <img src="/images/mobile-table.png" alt="A member's documents on a phone: scrolling tabs and totals, a full-width Create Request button and documents grouped by type with their status." loading="lazy" />
+        <img src="/images/mobile-form.png" alt="Create Request flow on a phone: a vertical stepper with only the active step open, full-width options and a full-width Next button." loading="lazy" />
+      </div>
+      <figcaption>Navigation, a data-heavy screen and a multi-step form, each designed for a phone. Demo data.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Borrowers first</h2>
+    <div>
+      <p>Borrowers were the priority because they're the ones on phones. 19 of 20 borrower pages are now responsive, including the biggest: the loan application form, document uploads and requests.</p>
+      <ul>
+        {borrower.map(([label, n]) => <li><strong>{n}</strong> {label.toLowerCase()}</li>)}
+      </ul>
+      <p>On the lender side, every remaining desktop-only page is an admin configuration editor, used once at a desk to set up products and forms. None of the day-to-day lender work is in the gap.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I learned</h2>
+    <div>
+      <p>Mobile works best as a property of the system, not a project. Building it into components meant the migration delivered mobile for free, and it kept going as other engineers built new screens on the same parts.</p>
+    </div>
+  </section>
+</CaseStudy>
+
+<style>
+  :global(figure.hero) { max-width: 760px; }
+  .phones { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-4); max-width: 900px; }
+  .phones img { border-radius: 22px; border: 1px solid var(--line); }
+  @media (max-width: 560px) { .phones { grid-template-columns: 1fr 1fr; } }
+</style>

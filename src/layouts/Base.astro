@@ -1,0 +1,101 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource/instrument-serif";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Rachel Reid | Senior Product Designer",
+  description = "Glasgow-based product designer who builds accessible design systems and ships front-end UI with Claude Code.",
+} = Astro.props;
+
+const path = Astro.url.pathname;
+const nav = [
+  { href: "/", label: "Work", match: (p: string) => p === "/" || p.startsWith("/work") },
+  { href: "/about", label: "About", match: (p: string) => p.startsWith("/about") },
+  { href: "/cv", label: "CV", match: (p: string) => p.startsWith("/cv") },
+];
+---
+
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="wordmark" aria-label="Rachel Reid, home">Rachel Reid</a>
+        <nav aria-label="Main">
+          <ul>
+            {nav.map((item) => (
+              <li>
+                <a href={item.href} aria-current={item.match(path) ? "page" : undefined}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-title">Let's talk.</p>
+          <p class="footer-sub">Happy to chat about design systems, accessibility or designing with AI.</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="mailto:rachel.myinbox@gmail.com">rachel.myinbox@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/rachel-reid-406559229/">LinkedIn</a></li>
+          <li><a href="/rachel-reid-cv.pdf" download="Rachel Reid CV.pdf">CV (PDF)</a></li>
+          <li><a href="/archive">Archive</a></li>
+        </ul>
+      </div>
+      <div class="container colophon">
+        <p>Designed and built by Rachel Reid with Claude Code. © {new Date().getFullYear()}</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .site-header {
+    position: sticky; top: 0; z-index: 5;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .wordmark { font-weight: 650; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; font-size: 1.0625rem; }
+  nav ul { display: flex; gap: var(--s-1); list-style: none; margin: 0; padding: 0; }
+  nav a {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--s-3);
+    border-radius: 999px; color: var(--ink-2); text-decoration: none; font-size: 0.9375rem; font-weight: 500;
+  }
+  nav a:hover { color: var(--ink); background: var(--surface); }
+  nav a[aria-current="page"] { color: var(--ink); background: var(--surface); }
+
+  .site-footer { margin-top: var(--s-9); border-top: 1px solid var(--line); padding: var(--s-8) 0 var(--s-6); }
+  .footer-inner { display: flex; flex-wrap: wrap; gap: var(--s-6); justify-content: space-between; align-items: flex-end; }
+  .footer-title { font-family: var(--font-serif); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1; color: var(--ink); }
+  .footer-sub { margin-top: var(--s-3); color: var(--ink-3); }
+  .footer-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .footer-links a { color: var(--ink); display: inline-flex; align-items: center; min-height: 36px; }
+  .colophon { margin-top: var(--s-7); font-size: 0.875rem; color: var(--ink-3); }
+</style>

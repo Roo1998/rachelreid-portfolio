@@ -1,0 +1,95 @@
+---
+import Base from "./Base.astro";
+
+interface Props {
+  title: string;
+  summary: string;
+  role: string;
+  team: string;
+  timeline: string;
+  tools: string;
+  outcome: string;
+  hero?: { src: string; alt: string };
+  next?: { href: string; title: string };
+}
+
+const { title, summary, role, team, timeline, tools, outcome, hero, next } = Astro.props;
+---
+
+<Base title={`${title} | Rachel Reid`} description={summary}>
+  <article>
+    <header class="container cs-header">
+      <a class="back" href="/">← All work</a>
+      <h1>{title}</h1>
+      <p class="lede">{summary}</p>
+      <dl class="facts">
+        <div><dt>Role</dt><dd>{role}</dd></div>
+        <div><dt>Team</dt><dd>{team}</dd></div>
+        <div><dt>Timeline</dt><dd>{timeline}</dd></div>
+        <div><dt>Tools</dt><dd>{tools}</dd></div>
+      </dl>
+      <p class="outcome"><span class="eyebrow">Outcome</span>{outcome}</p>
+    </header>
+
+    {hero && (
+      <figure class="container hero">
+        <img src={hero.src} alt={hero.alt} />
+      </figure>
+    )}
+
+    <div class="container prose">
+      <slot />
+    </div>
+
+    {next && (
+      <nav class="container next" aria-label="Next case study">
+        <span class="eyebrow">Next</span>
+        <a href={next.href}>{next.title} →</a>
+      </nav>
+    )}
+  </article>
+</Base>
+
+<style>
+  .cs-header { padding-top: var(--s-8); padding-bottom: var(--s-7); }
+  .back { display: inline-block; margin-bottom: var(--s-6); color: var(--ink-3); text-decoration: none; font-size: 0.9375rem; }
+  .back:hover { color: var(--ink); }
+  h1 { max-width: 18ch; }
+  .lede { margin-top: var(--s-5); font-size: 1.25rem; line-height: 1.5; color: var(--ink-2); max-width: 46ch; }
+  .facts {
+    margin: var(--s-7) 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-5);
+    padding: var(--s-5) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .facts dt { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+  .facts dd { margin: var(--s-1) 0 0; color: var(--ink); font-size: 0.9375rem; }
+  .outcome { margin-top: var(--s-5); display: grid; gap: var(--s-1); max-width: 60ch; color: var(--ink); font-size: 1.0625rem; }
+  @media (max-width: 760px) { .facts { grid-template-columns: 1fr 1fr; } }
+
+  .hero { margin: 0 auto; }
+  .hero img { border-radius: var(--radius); border: 1px solid var(--line); width: 100%; }
+
+  .prose { margin-top: var(--s-8); }
+  .prose :global(section) { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: var(--s-6); padding: var(--s-7) 0; border-top: 1px solid var(--line); }
+  .prose :global(section > h2) { font-size: 1.25rem; align-self: start; }
+  .prose :global(section > div) { grid-column: 2; max-width: var(--measure); display: grid; gap: var(--s-4); }
+  .prose :global(h3) { margin-top: var(--s-3); }
+  .prose :global(ul), .prose :global(ol) { margin: 0; padding-left: 1.2em; display: grid; gap: var(--s-2); }
+  .prose :global(figure) { margin: var(--s-5) 0 0; grid-column: 1 / -1; }
+  .prose :global(figure img) { border-radius: var(--radius); border: 1px solid var(--line); width: 100%; background: var(--surface); }
+  .prose :global(figcaption) { margin-top: var(--s-3); font-size: 0.9375rem; color: var(--ink-3); }
+  .prose :global(.callout) { background: var(--accent-soft); border-radius: var(--radius); padding: var(--s-5); color: var(--ink); }
+  .prose :global(.stats) { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--s-4); }
+  .prose :global(.stat) { background: var(--surface); border-radius: var(--radius); padding: var(--s-5); }
+  .prose :global(.stat strong) { display: block; font-size: 2rem; letter-spacing: -0.03em; color: var(--ink); line-height: 1.1; }
+  .prose :global(.stat span) { font-size: 0.9375rem; color: var(--ink-3); }
+  .prose :global(pre) { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: var(--s-4); overflow-x: auto; font-size: 0.875rem; line-height: 1.5; }
+  @media (max-width: 860px) {
+    .prose :global(section) { grid-template-columns: 1fr; gap: var(--s-4); }
+    .prose :global(section > h2) { position: static; }
+    .prose :global(section > div) { grid-column: auto; }
+  }
+
+  .next { margin-top: var(--s-8); padding-top: var(--s-6); border-top: 1px solid var(--line); display: grid; gap: var(--s-2); }
+  .next a { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 650; letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+  .next a:hover { color: var(--accent); }
+</style>

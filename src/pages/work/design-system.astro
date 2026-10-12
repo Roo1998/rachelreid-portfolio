@@ -1,0 +1,158 @@
+---
+import CaseStudy from "../../layouts/CaseStudy.astro";
+---
+
+<CaseStudy
+  title="An accessible design system, designed in code"
+  summary="I built a fintech's component library from scratch on MUI and Material 3, then moved design out of Figma and into code, where Storybook became the design surface."
+  role="Lead designer and builder"
+  team="Design team and product engineers"
+  timeline="2022 – present"
+  tools="Figma (2022–25), Storybook, MUI, Material 3, Claude Code"
+  outcome="More than 100 components, all built and documented, with about half of the app now running on them. A Claude Code workflow I designed lets anyone on the team create, review and migrate UI to the same standard."
+  hero={{ src: "/images/ds-hero.png", alt: "The button component in light and dark mode, showing variants, sizes and states, above an automated accessibility check reporting 0 violations and 19 passes." }}
+  next={{ href: "/work/lender-research", title: "From mistrust to one source of truth" }}
+>
+  <section>
+    <h2>The problem</h2>
+    <div>
+      <p>As the product grew from early stage to Series A, every feature solved UI problems its own way. The same component existed in several versions, handoff needed constant clarification, and accessibility depended on who built the screen.</p>
+      <p>The team needed one source of truth that designers and engineers both trusted, and that made the accessible choice the easy one.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Results so far</h2>
+    <div>
+      <div class="stats">
+        <div class="stat"><strong>100+</strong><span>components, all built</span></div>
+        <div class="stat"><strong>~50%</strong><span>of the app migrated onto it</span></div>
+                <div class="stat"><strong>Every</strong><span>component has usage and WCAG 2.1 AA guidelines</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Starting in Figma</h2>
+    <div>
+      <p>In 2022 I began by auditing the product for repeated patterns and inconsistencies, then defined styles and components in a Figma library: colour, type, layout and more than 30 components, each marked when ready for development.</p>
+      <p>For three years Figma gave the team a shared language. But every decision lived in two places, the design file and the code, and the two kept drifting apart.</p>
+    </div>
+    <figure>
+      <img src="/images/ds-figma-library.png" alt="Figma component library with a table of contents for styles and over 30 components, many marked as ready for development." loading="lazy" />
+      <figcaption>The original Figma library: useful for alignment, but a second source of truth.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Moving design into code</h2>
+    <div>
+      <p>At the end of 2025 I started working in Claude Code, and around Christmas we moved the system into code. From then on Figma became redundant. I now design directly in the component library, making decisions in React and reviewing them in Storybook, where every variant and state is live.</p>
+      <p>The library wraps MUI React primitives and follows one principle:</p>
+      <p class="callout"><strong>MUI tells us what we can do. Material 3 tells us what we should do.</strong> Where MUI allows something Material 3 discourages, we follow Material 3 and document the deviation. Where the brand needs something different, the customisation is deliberate and written down.</p>
+      <p>Designing in code removed the handoff step. What I review in Storybook is exactly what ships.</p>
+    </div>
+    <figure>
+      <img src="/images/ds-storybook-overview.png" alt="Storybook showing the component library sidebar and the Button documentation page, with a live preview and a table of props, descriptions, defaults and controls." loading="lazy" />
+      <figcaption>Storybook is where design decisions now happen: every component, variant and prop, live.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Teaching AI the system</h2>
+    <div>
+      <p>I designed the team's Claude Code workflow for the design system, so the rules live where the work happens:</p>
+      <ul>
+        <li><strong>Create:</strong> a command scaffolds a new component from an MUI primitive. It reads existing components first, proposes an API for approval, builds it, and writes its usage and accessibility docs.</li>
+        <li><strong>Review:</strong> commands audit a component against Material 3, WCAG 2.1 AA, MUI compatibility and responsiveness, and check that components are used as intended. Every finding names a file, a line and a fix a junior engineer can act on.</li>
+        <li><strong>Plan:</strong> a page audit lists every component a screen uses, sorts it into what already exists, what stays in the app and what to build, and outputs a ready-to-paste Jira ticket.</li>
+        <li><strong>Execute:</strong> a ticket runner walks that Jira ticket subtask by subtask, calling the right command for each and stopping for approval after every step.</li>
+        <li><strong>Coach:</strong> an agent pairs with junior engineers as they build components, explaining each decision against our precedent and the Material 3 rules.</li>
+      </ul>
+      <p>The result is a system that scales beyond me: anyone, human or AI, building UI gets the same standards by default.</p>
+    </div>
+    <figure>
+      <img src="/images/ds-usage-guidelines.png" alt="Storybook docs page for a bottom navigation component, listing key features, when to use it and when not to use it, including Material Design 3 and WCAG 2.1 AA compliance." loading="lazy" />
+      <figcaption>Every component ships with written guidance: what it is for, when to use it and when not to.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Accessibility built in</h2>
+    <div>
+      <p>Every component is designed and built to meet WCAG 2.1 AA and ships with an accessibility compliance doc covering keyboard use, focus, contrast and ARIA. Components also warn in development when they're used in a way that would hurt accessibility.</p>
+      <pre tabindex="0" aria-label="Code example: runtime check for all-caps button labels"><code>{`// Runtime check inside the button component
+if (label === label.toUpperCase() && label.length > 2) {
+  console.warn('Button: label must not be all caps. Use title or sentence case.');
+}`}</code></pre>
+      <p>On top of that, an automated sweep checks all 1,313 Storybook stories against WCAG 2.1 AA every weeknight, so regressions are caught across the whole library, not one component at a time.</p>
+      <p>Building the rules into the components means accessibility no longer depends on every engineer remembering them.</p>
+    </div>
+    <figure>
+      <img src="/images/ds-accessibility.png" alt="Storybook accessibility panel on a table component showing 0 violations, 19 passes and 0 inconclusive results." loading="lazy" />
+      <figcaption>Automated accessibility results for a table component: 0 violations, 19 passes.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Theming: dark mode and skins</h2>
+    <div>
+      <p>The theme had a basic dark palette from the start, but it wasn't reliable: colours read in code resolved to their light values, and pieces of the app went invisible in dark mode. Our own team, most of whom work in dark mode, had asked for it for a long time.</p>
+      <p>From July 2026 I led a restructure of the colour theme. It has grown from 35 colour roles to 42, with new roles for things one colour can't do safely, like an accent that works as a fill but needs a separate, darker shade as text. Many values are now derived and measured when the theme builds, rather than picked by hand.</p>
+      <p>On the same structure I designed and built, with Claude, a skin system for white-labelling. A lender can have the platform in their own brand colours, but only primary, secondary and accent can change. Everything that carries a contrast guarantee stays governed by the system, so a brand can't break accessibility.</p>
+      <p>Skins carry regional formatting too, such as day-first dates (9 Mar 2026) or month-first (Mar 9, 2026), which matters when the same product serves lenders in the UK and the US.</p>
+      <p>In September 2026 I made dark mode a user choice: Light, Dark or Use Device Setting, applied instantly with no flash of the wrong theme. I wrote 80% of the dark mode work.</p>
+      <div class="stats">
+        <div class="stat"><strong>42</strong><span>colour roles, each with a light and a dark value</span></div>
+        <div class="stat"><strong>15</strong><span>automated contrast checks on every pull request</span></div>
+        <div class="stat"><strong>1.09:1 → AA</strong><span>worst dark mode contrast bug found and fixed</span></div>
+      </div>
+      <p>Contrast is checked in both schemes by scripts that read the real theme. Five of the bugs they caught failed in only one scheme, and two of those failed in light mode, which is why every check measures both.</p>
+    </div>
+    <figure>
+      <img src="/images/ds-light-dark.png" alt="The button component sheet side by side in light and dark mode, showing every variant, size and state in both." loading="lazy" />
+      <figcaption>The same components in light and dark, from one set of colour roles.</figcaption>
+    </figure>
+    <figure>
+      <img src="/images/ds-skins.png" alt="The same component page under the default skin, navy with a teal accent, and an invented demo client skin, green with a coral accent. Buttons, chips, a progress stepper and links all change with the brand." loading="lazy" />
+      <figcaption>One component page, two brands. The demo client skin is invented for this portfolio; only primary, secondary and accent change.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The migration</h2>
+    <div>
+      <p>With the library complete, I'm leading the move of the live app onto it. About half of the app is migrated so far.</p>
+      <p>The migration isn't a straight swap. I audit each page's UI and UX as I go and propose a redesign where it's needed, so every migrated screen comes out more consistent and easier for lenders and borrowers to use, not just rebuilt with new parts.</p>
+      <p>Every component I redesign is also responsive. The platform was built for desktop only, but most borrowers use their phones, so each migrated screen becomes mobile-friendly with only small adjustments.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Owning UI quality across the team</h2>
+    <div>
+      <p>I review every pull request that touches UI, from every developer on the team. It's a role built on trust: nothing reaches users until I've checked it.</p>
+      <ul>
+        <li>Does it use the right design system components?</li>
+        <li>Does it follow our usage and accessibility guidelines?</li>
+        <li>Is it consistent with the rest of the platform?</li>
+        <li>Is it good UX for the people using it?</li>
+      </ul>
+      <p>My own pull requests go through an AI code reviewer and, where needed, a developer. The Claude Code commands above mean most issues are caught before a PR reaches me, so reviews focus on experience, not fixing basics.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What the team says</h2>
+    <div>
+      <p class="callout">“Rachel built our design system and the tooling around it, so developers get her standards by default. She reviews every UI change we ship, and she turns concepts into working front end in a day.”<br /><span style="font-size:0.9375rem">Libby, lead developer</span></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I learned</h2>
+    <div>
+      <p>Designing in code was the biggest shift. It cut out a whole layer of drift between design and build, and it made AI genuinely useful: Claude Code can follow a system written in code far more reliably than one described in a design file.</p>
+    </div>
+  </section>
+</CaseStudy>

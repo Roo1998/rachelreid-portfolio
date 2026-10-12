@@ -1,0 +1,67 @@
+---
+import Base from "../../layouts/Base.astro";
+import { projects } from "../../data/archive-projects";
+import content from "../../data/archive.json";
+const altFiles = import.meta.glob<{ default: Record<string, string> }>("../../data/archive-alt.json", { eager: true });
+const alts: Record<string, string> = Object.values(altFiles)[0]?.default ?? {};
+
+type Block = { type: "text" | "caption"; lines: string[] } | { type: "image"; src: string } | { type: "embed"; src: string };
+
+export function getStaticPaths() {
+  return projects.map((p, i) => ({ params: { slug: p.slug }, props: { index: i } }));
+}
+
+const { index } = Astro.props;
+const project = projects[index];
+const next = projects[(index + 1) % projects.length];
+const blocks = ((content as Record<string, Block[]>)[project.slug] ?? []);
+const embedKind = (src: string) =>
+  /figma\.com|invis\.io/.test(src) ? "interactive prototype" : /loom\.com/.test(src) ? "Loom walkthrough video" : "video";
+const embeds = blocks.filter((b) => b.type === "embed");
+const embedTitle = (src: string) => {
+  const i = embeds.findIndex((b) => b.src === src);
+  return `${project.title}: ${embedKind(src)}${embeds.length > 1 ? ` (${i + 1} of ${embeds.length})` : ""}`;
+};
+---
+
+<Base title={`${project.title} | Archive | Rachel Reid`} description={project.body}>
+  <article class="container arch">
+    <a class="back" href="/archive">← Archive</a>
+    <p class="eyebrow">{project.year} · Student work</p>
+    <h1>{project.title}</h1>
+    <p class="lede">{project.body}</p>
+
+    <div class="blocks">
+      {blocks.map((b) => {
+        if (b.type === "image") return <img src={b.src} alt={alts[b.src] ?? `${project.title}: project image`} loading="lazy" />;
+        if (b.type === "embed") return (
+          <div class="embed"><iframe src={b.src} title={embedTitle(b.src)} loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+        );
+        if (b.type === "caption") return <p class="caption">{b.lines.join(" ")}</p>;
+        return <div class="text">{b.lines.map((l) => <p>{l}</p>)}</div>;
+      })}
+    </div>
+
+    <nav class="next" aria-label="Next project">
+      <span class="eyebrow">Next in the archive</span>
+      <a href={`/archive/${next.slug}`}>{next.title} →</a>
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .arch { padding-top: var(--s-8); max-width: 920px; }
+  .back { display: inline-block; margin-bottom: var(--s-5); color: var(--ink-3); text-decoration: none; font-size: 0.9375rem; }
+  .back:hover { color: var(--ink); }
+  h1 { margin-top: var(--s-2); }
+  .lede { margin-top: var(--s-4); font-size: 1.125rem; max-width: 60ch; }
+  .blocks { margin-top: var(--s-7); display: grid; gap: var(--s-4); }
+  .blocks img { width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--surface); }
+  .caption { color: var(--ink-3); font-size: 0.9375rem; max-width: 70ch; margin-top: calc(var(--s-2) * -1); margin-bottom: var(--s-3); }
+  .text { display: grid; gap: var(--s-2); max-width: 70ch; }
+  .embed { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius-sm); overflow: hidden; background: #000; }
+  .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .next { margin-top: var(--s-8); padding-top: var(--s-6); border-top: 1px solid var(--line); display: grid; gap: var(--s-2); }
+  .next a { font-size: clamp(1.25rem, 2.6vw, 1.75rem); font-weight: 650; letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+  .next a:hover { color: var(--accent); }
+</style>

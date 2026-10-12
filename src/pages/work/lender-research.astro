@@ -1,0 +1,197 @@
+---
+import CaseStudy from "../../layouts/CaseStudy.astro";
+import KeyTerms from "../../components/KeyTerms.astro";
+
+const findings = [
+  { title: "No source of truth", body: "Staff ran their real work in a project board, a file store and their core banking system, then updated our product afterwards. It felt like extra admin, not the place work happens." },
+  { title: "Navigation felt fuzzy", body: "Users clicked around in loops and weren't confident they were seeing the full picture, especially when a customer had several reviews open at once." },
+  { title: "The wrong mental model", body: "We organised work by product and review. They think about the member, and only care whether they have the documents they need." },
+  { title: "Dates they couldn't trust", body: "Review dates came from loan anniversaries, but staff work to the dates documents are actually due. The mismatch eroded trust in everything else." },
+  { title: "Fear of spamming borrowers", body: "Nobody could see that duplicate requests were merged, so staff worried about asking a borrower for the same document twice." },
+];
+
+const roadmap = [
+  { fix: "Reviews Overview", solves: "Clunky reviews, several open at once, hard to find the right one", status: "Built", mine: true },
+  { fix: "Requests Overview", solves: "They care about documents, not reviews; member-centric view", status: "Built", mine: true },
+  { fix: "Request deduplication", solves: "Fear of spamming borrowers; lost trust", status: "Built", mine: true },
+  { fix: "Request rejection", solves: "Cancelled requests treated as throwaway, not a conversation", status: "In progress", mine: true },
+  { fix: "Reviews and requests refactor", solves: "Reviews own document requests; statuses differ across the app", status: "Planned", mine: false },
+  { fix: "Due dates fix", solves: "Dates don't match their other systems", status: "Needs client decision", mine: false },
+];
+---
+
+<CaseStudy
+  title="From mistrust to one source of truth"
+  summary="I designed the first version of our loan review tools in 2024. In 2026 a US client still didn't trust them with their work, so I sat in on research sessions with their team, then designed and built the front end of the fixes."
+  role="Lead designer: v1 in Figma, fixes built in code"
+  team="Product, engineering and the client's servicing team"
+  timeline="Nov 2024 (v1); June 2026 – present"
+  tools="Figma, remote research, Claude Code, design system"
+  outcome="Nine pain points turned into a six-part roadmap. I've designed and built the first three fixes, with the fourth under way. A developer handled the back end."
+  next={{ href: "/work/frank-bean", title: "Rebuilding a family gift shop with Claude Code" }}
+>
+  <KeyTerms />
+
+  <section>
+    <h2>Where it started</h2>
+    <div>
+      <p>Lenders used to chase borrowers for review documents through email, letters, phone calls and fax. Nothing was tracked, statuses were unclear, and legally required paperwork could slip through.</p>
+      <p>As lead designer, I wrote the spec with product and development, then designed version one in Figma for both sides: lenders setting up and managing reviews, and borrowers seeing what was needed and uploading it. It launched in November 2024.</p>
+    </div>
+    <figure>
+      <img src="/images/loan-before-after.png" alt="Before and after comparison. Before: phone calls, emails, letters, fax and legacy systems, causing missed documents and manual follow-up. After: one system with uploads, automated emails, AI-assisted document processing and status tracking." loading="lazy" />
+      <figcaption>Version one replaced five disconnected channels with one system.</figcaption>
+    </figure>
+    <div>
+      <h3>Three versions, one choice</h3>
+      <p>I explored three versions of the review setup flow, mapping every state: schedule, file requests, covenants of three types (value, yes/no and custom), errors, editing, deleting and a final summary. Comparing them with product and development is how we chose the preferred design. The flow launched with three steps and grew to five by mid-2025 as needs became clear.</p>
+    </div>
+    <figure>
+      <img src="/images/loan-figma-v3.png" alt="Figma overview of version 3 of the review setup flow, marked Design Preferred, with rows of screens for schedule, file request, value, boolean and custom covenants, error states, active date, editing, deleting and summary." loading="lazy" />
+      <figcaption>Version 3 of the setup flow in Figma, the preferred design, with every state mapped.</figcaption>
+    </figure>
+    <div>
+      <p>Every document request shows its status at a glance (incomplete, uploaded, accepted, rejected, cancelled or waived), and automated reminders replace manual chasing. When a borrower uploads a file, AI checks it and flags it if it may not be the document that was requested. I advised the junior developer who built that on how a lender would want it to behave.</p>
+    </div>
+    <figure>
+      <img src="/images/loan-review-details-current.png" alt="Review Details page for a lender: the review's completed and due dates, then file requests grouped by status, with one of two documents submitted." loading="lazy" />
+      <figcaption>A review today: every document request grouped by status. Demo data.</figcaption>
+    </figure>
+    <div>
+      <p>Version one worked: it replaced five channels with one. But shipping wasn't the end of the story.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Context</h2>
+    <div>
+      <p>By 2026, one of our clients, a US lender, was using the platform to manage loan reviews, but usage was low and the team sensed something was off.</p>
+      <p>Rather than guess, we ran three remote sessions over Google Meet in June and July 2026 and watched their servicing team do their real work. The rule we set ourselves: absorb, don't fix on the call. Come back with design concepts instead.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>How we ran it</h2>
+    <div>
+      <ul>
+        <li><strong>Session 1:</strong> staff walked us through how they find and work on reviews day to day.</li>
+        <li><strong>Session 2:</strong> a deeper look at how they configure reviews, add requirements and enter covenants.</li>
+        <li><strong>Session 3:</strong> how new loans are onboarded and set up for their first review.</li>
+      </ul>
+      <p>I observed every session, noting where people hesitated, worked around the product, or went to another tool. Between sessions, staff logged frustrations and screenshots as they hit them.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we saw</h2>
+    <div>
+      <div class="findings">
+        {findings.map((f) => (
+          <article class="finding">
+            <h3>{f.title}</h3>
+            <p>{f.body}</p>
+          </article>
+        ))}
+      </div>
+      <p class="callout">The root problem wasn't a missing feature. It was trust. The goal everyone agreed on: a single, confident snapshot of what's required, what's received and what's missing, without cross-checking other systems.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>From findings to a roadmap</h2>
+    <div>
+      <p>We distilled the sessions into nine issues, then mapped each one to the change that would solve it. Some fixes solve several issues at once, which set the order.</p>
+      <div class="table-wrap" role="region" aria-labelledby="roadmap-caption" tabindex="0">
+        <table role="table">
+          <caption id="roadmap-caption" class="visually-hidden">Roadmap: each fix, the issues it solves and its status</caption>
+          <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Fix</th><th scope="col" role="columnheader">Solves</th><th scope="col" role="columnheader">Status</th></tr></thead>
+          <tbody role="rowgroup">
+            {roadmap.map((r) => (
+              <tr role="row">
+                <th scope="row" role="rowheader">{r.fix}{r.mine && <span class="mine">Designed and built by me</span>}</th>
+                <td role="cell" data-label="Solves">{r.solves}</td>
+                <td role="cell"><span class:list={["status", r.status.toLowerCase().replace(/\s+/g, "-")]}>{r.status}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I designed and built</h2>
+    <div>
+      <h3>Reviews Overview</h3>
+      <p>One tab on the member profile that shows every review and its status at once, with totals for overdue, due soon and complete, grouped by product. It replaces drilling in and out of individual reviews to find a single item.</p>
+      <figure>
+        <img src="/images/lr-reviews-overview.png" alt="Reviews tab on a member profile: totals for 269 reviews (168 overdue, 3 due later, 98 complete), a Group by control set to Product, and reviews listed under each product with status and requirements." loading="lazy" />
+        <figcaption>Reviews Overview: every review for a member, with status at a glance. Demo data.</figcaption>
+      </figure>
+      <h3>Requests Overview</h3>
+      <p>A Documents tab that shows every document requested from a member in one place, grouped by document type, with totals for overdue and due soon and a clear status on each. Staff can check they have what they need without thinking about reviews at all, which is how they actually work.</p>
+      <figure>
+        <img src="/images/lr-documents-overview.png" alt="Documents tab on a member profile: 147 documents, 100 overdue, grouped by document type, each showing its due date, status such as Awaiting upload, and a Linked in N places chip." loading="lazy" />
+        <figcaption>The documents view, grouped by type. Each one shows where else it is used. Demo data.</figcaption>
+      </figure>
+      <h3>Request deduplication</h3>
+      <p>The platform already merged duplicate requests behind the scenes, but nobody knew. Now every document shows a "Linked in N places" chip, and opening it reveals the linked context, the products and reviews it covers, plus a timeline of when it was requested, reminded and fulfilled. Staff can see one upload satisfies several needs, and that the borrower isn't being asked twice.</p>
+      <figure>
+        <img src="/images/lr-linked-context.png" alt="An uploaded document expanded to show a request timeline (created, sent, last reminder, fulfilled) and a Linked Context panel listing the product and review it is attached to." loading="lazy" />
+        <figcaption>One document, linked to a product and a review, with its full request history. Demo data.</figcaption>
+      </figure>
+      <h3>Next: request rejection</h3>
+      <p>Cancelled requests used to disappear like throwaway items. I'm redesigning them as a back-and-forth between lender and borrower, so the history of a document stays visible.</p>
+      <p>For each one I designed the experience, then built the UI and front end with Claude Code on our design system. A developer built the back end.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Principles we confirmed</h2>
+    <div>
+      <p>The sessions also settled design questions. The client confirmed that covenant changes should always apply to every future review; there's no real case for editing just one. Much of the old interface assumed the opposite, so this simplified future designs.</p>
+      <p>We also found features staff didn't know existed, which pointed to onboarding and documentation gaps, not just UI ones.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Where it stands</h2>
+    <div>
+      <p>Three of the roadmap's fixes are built and the fourth is in progress. The bigger structural changes, and aligning review dates with the client's systems, are next and depend on decisions with the client. It's too early for hard numbers, so I'm not claiming any yet.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I learned</h2>
+    <div>
+      <p>Watching people work tells you things a feature request never will. The client asked for date fixes, but underneath was a mismatch in how they think about their work. Designing around their mental model, member first and documents first, mattered more than any single screen.</p>
+    </div>
+  </section>
+</CaseStudy>
+
+<style>
+  .findings { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--s-4); }
+  .finding { background: var(--surface); border-radius: var(--radius); padding: var(--s-5); display: grid; gap: var(--s-2); align-content: start; }
+  .finding p { font-size: 0.9375rem; }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+  th, td { text-align: left; padding: var(--s-3) var(--s-4); border-bottom: 1px solid var(--line); vertical-align: top; }
+  tbody tr:last-child > * { border-bottom: 0; }
+  thead th { font-size: 0.8125rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; background: var(--surface); }
+  tbody th { color: var(--ink); font-weight: 600; min-width: 180px; }
+  .mine { display: block; margin-top: 2px; font-size: 0.8125rem; font-weight: 500; color: var(--ink-3); }
+  /* Phones: each row becomes a card, the same pattern as the mobile case study */
+  @media (max-width: 640px) {
+    .table-wrap { overflow: visible; border: 0; }
+    table, tbody, tr, th, td { display: block; }
+    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    tr { border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s-4); margin-bottom: var(--s-3); display: grid; gap: var(--s-2); }
+    th, td { padding: 0; border: 0; }
+    tbody th { min-width: 0; }
+    td[data-label="Solves"]::before { content: attr(data-label); display: block; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
+  }
+  .status { display: inline-block; white-space: nowrap; font-size: 0.8125rem; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink-2); }
+  .status.built { background: #e3f4e8; border-color: #b9e0c5; color: #1d5c32; }
+  .status.in-progress { background: var(--accent-soft); border-color: transparent; color: var(--accent); }
+  @media (prefers-color-scheme: dark) { .status.built { background: #16301f; border-color: #24502f; color: #9fe0b3; } }
+</style>

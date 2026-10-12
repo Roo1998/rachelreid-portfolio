@@ -1,0 +1,122 @@
+---
+import Base from "../layouts/Base.astro";
+
+const ascent = [
+  {
+    heading: "Design system and accessibility",
+    items: [
+      "Created Ascent's design system from scratch: more than 100 React components built on MUI, following Material 3 and customised for the brand, with usage and accessibility guidelines for each component.",
+      "Wrote the accessibility guidelines and component changes needed to meet WCAG 2.1 AA, covering keyboard use, focus, contrast and ARIA.",
+      "Leading the migration of the live app onto the new accessible system, about half complete, auditing each page's UI and UX and redesigning where needed.",
+      "Restructured the colour theme into light and dark roles to ship dark mode, and to support white-label skins in each client's brand colours.",
+      "Redesigning the platform, built for desktop only, to work on mobile, borrowers first, with every redesigned component responsive.",
+      "Designed the team's Claude Code workflow for the design system: commands that create, review and check usage of components, audit pages into Jira tickets and run those tickets end to end, plus a coaching agent for junior engineers.",
+    ],
+  },
+  {
+    heading: "Product design and front end",
+    items: [
+      "Design and ship new features end to end, from discovery with founders, clients and lenders to release.",
+      "Led the loan reviews and renewals feature, replacing email, letters and fax with one trackable flow for lenders and borrowers.",
+      "Prototype in working code with Claude Code and Claude artifacts built on the design system, so stakeholders and engineers review real UI, not static files.",
+      "Build front-end UI in React with Claude Code, and hand off cleanly to engineers for back-end work.",
+      "Built Claude Code quality-control commands that developers run on front-end work, catching design system, accessibility and consistency issues before code review.",
+    ],
+  },
+  {
+    heading: "Leadership",
+    items: [
+      "Stepped up as lead UX designer: guide and give structured feedback to junior designers and support their onboarding.",
+      "Work daily with founders, product managers and engineers to set priorities and balance user needs with business goals.",
+      "Review every pull request that touches UI, from any developer, for component use, guidelines, consistency and UX.",
+      "Ran remote research sessions with a US lender client, then designed and built the front end of the fixes: a reviews overview, a documents overview and request deduplication.",
+    ],
+  },
+];
+
+const frank = [
+  "Audited and redesigned the Shopify store with Claude Code, from priorities to production code and data.",
+  "Rebuilt navigation around how people shop for gifts: by product, occasion and interest. Added 11 occasion collections and 4 storefront filters.",
+  "Rewrote, tagged and added alt text to 191 products using scripted bulk edits with dry runs, backups and verification.",
+  "Fixed a header menu that closed on tap, adding keyboard (Escape) support and 48 px targets, and shipped it to the live store.",
+  "Made personalisation clearer: a \"how it works\" homepage section and a longer, better-labelled engraving text field.",
+];
+---
+
+<Base title="CV | Rachel Reid">
+  <article class="container cv">
+    <header class="cv-head">
+      <div>
+        <p class="eyebrow">CV</p>
+        <h1>Rachel Reid</h1>
+        <p class="tagline">Senior Product Designer · Design Systems · Accessibility · Builds with Claude Code</p>
+        <p class="contact">Glasgow, UK · <a href="mailto:rachel.myinbox@gmail.com">rachel.myinbox@gmail.com</a> · <a href="https://www.linkedin.com/in/rachel-reid-406559229/">LinkedIn</a></p>
+      </div>
+      <a class="btn btn-primary" href="/rachel-reid-cv.pdf" download="Rachel Reid CV.pdf">Download PDF</a>
+    </header>
+
+    <section>
+      <h2>Profile</h2>
+      <div>
+        <p>Product designer with four years at fintech startup Ascent Platform, from early stage to Series A. I created the company's design system from scratch in React and MUI, made it WCAG compliant, and am now leading the app's migration onto it.</p>
+        <p>I design and build front-end UI with Claude Code, prototyping in working code on the real design system instead of static mock-ups. I work with international clients, including lenders in the US.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div>
+        <div class="role">
+          <h3>Product Experience Specialist (Lead UX/UI Designer)</h3>
+          <p class="meta">Ascent Platform, via Hollis Creative · July 2022 – present</p>
+        </div>
+        {ascent.map((group) => (
+          <>
+            <h4>{group.heading}</h4>
+            <ul>{group.items.map((i) => <li>{i}</li>)}</ul>
+          </>
+        ))}
+
+        <div class="role">
+          <h3>Product Designer (freelance)</h3>
+          <p class="meta"><a href="/work/frank-bean">Frank Bean Market</a> · Oct 2026 – present</p>
+        </div>
+        <ul>{frank.map((i) => <li>{i}</li>)}</ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div>
+        <p><strong>Design:</strong> product discovery, user flows, end-to-end feature design, design systems, Material 3, accessibility (WCAG 2.1 AA), prototyping, journey mapping</p>
+        <p><strong>AI and build:</strong> Claude Code, Claude artifacts, React, MUI, Storybook, Git and GitHub, Shopify</p>
+        <p><strong>Tools:</strong> Figma (advanced), VS Code, Notion, Excalidraw, Adobe Creative Cloud</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div>
+        <p><strong>BSc (Hons) Digital Interaction Design, 2:1</strong> · University of Dundee, 2022</p>
+      </div>
+    </section>
+  </article>
+</Base>
+
+<style>
+  .cv { padding-top: var(--s-9); }
+  .cv-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: var(--s-5); padding-bottom: var(--s-6); border-bottom: 1px solid var(--line); }
+  .cv-head h1 { margin-top: var(--s-3); }
+  .tagline { margin-top: var(--s-3); font-weight: 600; color: var(--accent); }
+  .contact { margin-top: var(--s-2); color: var(--ink-3); }
+  section { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: var(--s-6); padding: var(--s-6) 0; border-bottom: 1px solid var(--line); }
+  section h2 { font-size: 1.125rem; }
+  section > div { max-width: var(--measure); display: grid; gap: var(--s-3); }
+  .role { margin-top: var(--s-3); }
+  .role h3 { font-size: 1.125rem; }
+  .meta { color: var(--ink-3); font-size: 0.9375rem; margin-top: 2px; }
+  h4 { font-size: 0.9375rem; color: var(--ink); margin: var(--s-2) 0 0; }
+  ul { margin: 0; padding-left: 1.2em; display: grid; gap: var(--s-2); }
+  strong { color: var(--ink); }
+  @media (max-width: 860px) { section { grid-template-columns: 1fr; gap: var(--s-3); } }
+</style>

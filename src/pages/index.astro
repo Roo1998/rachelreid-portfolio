@@ -1,0 +1,173 @@
+---
+import Base from "../layouts/Base.astro";
+
+const work = [
+  {
+    href: "/work/design-system",
+    title: "An accessible design system, designed in code",
+    summary: "Built a fintech's component library from scratch on MUI and Material 3, moved design from Figma into Storybook, and wrote the Claude Code commands that build and check it.",
+    tags: ["Design systems", "Accessibility", "Claude Code"],
+    img: "/images/ds-hero.png",
+    alt: "The button component in light and dark mode above an accessibility check with 0 violations.",
+    featured: true,
+  },
+  {
+    href: "/work/lender-research",
+    title: "From mistrust to one source of truth",
+    summary: "Designed v1 of our loan review tools in Figma, watched a US client struggle with it, then designed and built the fixes with Claude Code.",
+    tags: ["User research", "International client", "Design and build"],
+    img: "/images/lr-documents-overview.png",
+    alt: "Documents view on a member profile, grouped by document type with statuses.",
+  },
+  {
+    href: "/work/frank-bean",
+    title: "Rebuilding a family gift shop with Claude Code",
+    summary: "Audited my dad's laser-engraving store, proposed fixes in interactive artifacts, and shipped them with Claude Code in about a week.",
+    tags: ["E-commerce", "Audit", "Design and build"],
+    img: "/images/fb-home-mobile.jpg",
+    alt: "Before and after of the Frank Bean Market homepage on a phone.",
+  },
+  {
+    href: "/work/mobile",
+    title: "Taking a desktop-only platform mobile",
+    summary: "Built responsiveness into every design system component, so the platform now works on phones for borrowers: 95% of borrower pages and 85% of lender pages.",
+    tags: ["Mobile", "Responsive design", "Design systems"],
+    img: "/images/mobile-before-after.png",
+    alt: "The same screen on a phone before and after: a squashed table becomes a mobile list.",
+  },
+];
+
+const practice = [
+  { title: "Discover", body: "I watch real users, audit the product with Claude and turn what I find into a plan, often in a day." },
+  { title: "Design in code", body: "I prototype on the real design system in Storybook and Claude artifacts, not in static files." },
+  { title: "Set the standard", body: "I designed the Claude Code workflow the team uses to create, review and migrate UI, and I review every UI pull request." },
+  { title: "Ship safely", body: "Changes go out with backups, dry runs and checks, so moving fast doesn't mean breaking things." },
+];
+---
+
+<Base>
+  <section class="container hero">
+    <p class="eyebrow">Product designer · Glasgow</p>
+    <h1>I design products <span class="serif">and</span> build them with Claude Code.</h1>
+    <p class="intro">
+      I'm Rachel. I created a fintech's accessible design system from scratch and I'm leading the app's migration onto it.
+      I design in code, write the tooling my developers use to check front-end quality, and ship UI to production.
+    </p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#work">View work</a>
+      <a class="btn btn-ghost" href="mailto:rachel.myinbox@gmail.com">Email me</a>
+    </div>
+  </section>
+
+  <section id="work" class="container work" aria-labelledby="work-heading">
+    <h2 id="work-heading" class="eyebrow">Selected work</h2>
+    <div class="grid">
+      {work.map((item) => (
+        <a class="card" href={item.href}>
+          <div class="card-media"><img src={item.img} alt={item.alt} loading="lazy" /></div>
+          <div class="card-body">
+            <h3>{item.title}</h3>
+            <p>{item.summary}</p>
+            <ul class="tags" aria-label="Topics">{item.tags.map((t) => <li class="tag">{t}</li>)}</ul>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="container quotes" aria-label="What people say">
+    <figure class="quote">
+      <blockquote><p>“Rachel built our design system and the tooling around it, so developers get her standards by default. She reviews every UI change we ship, and she turns concepts into working front end in a day.”</p></blockquote>
+      <figcaption><strong>Libby</strong>, lead developer</figcaption>
+    </figure>
+    <figure class="quote">
+      <blockquote><p>“Rachel spotted problems with my store I’d never have found, and fixed them in a week.”</p></blockquote>
+      <figcaption><strong>Frank</strong>, owner, <a href="https://frankbeanmarket.com/">Frank Bean Market</a></figcaption>
+    </figure>
+  </section>
+
+  <section class="container practice" aria-labelledby="practice-heading">
+    <div class="practice-head">
+      <h2 id="practice-heading">How I work with AI</h2>
+      <p>Claude is part of every stage, and I make every call on what ships.</p>
+    </div>
+    <ol class="steps">
+      {practice.map((step, i) => (
+        <li>
+          <span class="num">{String(i + 1).padStart(2, "0")}</span>
+          <h3>{step.title}</h3>
+          <p>{step.body}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="container colophon-feature" aria-labelledby="site-heading">
+    <div class="cf-card">
+      <p class="eyebrow">About this site</p>
+      <h2 id="site-heading">This portfolio is a case study too.</h2>
+      <p>I designed it and built it with Claude Code: the type scale, colour tokens, spacing and components are my own, and every page meets WCAG 2.1 AA. It's the same way I work day to day, deciding the design and directing Claude to build it in code.</p>
+      <ul class="cf-facts">
+        <li><strong>Design</strong><span>My own tokens, type and layout</span></li>
+        <li><strong>Build</strong><span>Astro, written with Claude Code</span></li>
+        <li><strong>Accessible</strong><span>WCAG 2.1 AA contrast, keyboard and focus</span></li>
+      </ul>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { padding-top: clamp(64px, 12vw, 136px); padding-bottom: var(--s-8); }
+  .hero h1 { margin-top: var(--s-4); max-width: 15ch; }
+  .hero .serif { font-style: italic; font-weight: 400; }
+  .intro { margin-top: var(--s-5); max-width: 52ch; font-size: 1.1875rem; line-height: 1.55; }
+  .actions { margin-top: var(--s-6); display: flex; flex-wrap: wrap; gap: var(--s-3); }
+
+  .work { padding-top: var(--s-6); }
+  .grid { margin-top: var(--s-5); display: grid; gap: var(--s-5); }
+  .card {
+    display: flex; flex-direction: column; text-decoration: none; color: inherit;
+    border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--bg);
+    transition: border-color .15s, transform .2s;
+  }
+  .card:hover { border-color: var(--ink-3); transform: translateY(-2px); }
+  .card { flex-direction: row; }
+  .card:nth-child(even) { flex-direction: row-reverse; }
+  .card-media { background: var(--surface); overflow: hidden; flex: 1.3; min-height: 340px; }
+  .card-media img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+  .card-body { flex: 1; padding: var(--s-6); display: grid; gap: var(--s-3); align-content: center; }
+  .card h3 { font-size: 1.625rem; }
+  .card p { color: var(--ink-2); }
+  .tags { list-style: none; padding: 0; margin: var(--s-2) 0 0; display: flex; flex-wrap: wrap; gap: var(--s-2); }
+  @media (max-width: 760px) {
+    .card, .card:nth-child(even) { flex-direction: column; }
+    .card-media { min-height: 0; aspect-ratio: 4 / 3; flex: none; }
+    .card-body { padding: var(--s-5); }
+  }
+
+  .practice { margin-top: var(--s-9); }
+  .practice-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: var(--s-4); }
+  .practice-head p { color: var(--ink-3); max-width: 40ch; }
+  .steps { list-style: none; padding: 0; margin: var(--s-6) 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-4); }
+  .steps li { background: var(--surface); border-radius: var(--radius); padding: var(--s-5); display: grid; gap: var(--s-2); align-content: start; }
+  .num { font-family: var(--font-serif); font-size: 1.75rem; color: var(--accent); line-height: 1; }
+  .steps p { font-size: 0.9375rem; }
+  @media (max-width: 960px) { .steps { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
+  .colophon-feature { margin-top: var(--s-9); }
+  .cf-card { border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(24px, 5vw, 56px); display: grid; gap: var(--s-4); background: linear-gradient(135deg, var(--accent-soft), var(--bg) 70%); }
+  .cf-card h2 { max-width: 20ch; }
+  .cf-card > p:not(.eyebrow) { max-width: 60ch; }
+  .cf-facts { list-style: none; padding: 0; margin: var(--s-3) 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-4); }
+  .cf-facts li { display: grid; gap: 2px; padding-top: var(--s-3); border-top: 1px solid var(--line); }
+  .cf-facts strong { color: var(--ink); }
+  .cf-facts span { font-size: 0.9375rem; color: var(--ink-3); }
+  @media (max-width: 640px) { .cf-facts { grid-template-columns: 1fr; } }
+  .quotes { margin-top: var(--s-9); display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-7); }
+  @media (max-width: 860px) { .quotes { grid-template-columns: 1fr; } }
+  .quote { margin: 0; padding-left: var(--s-6); border-left: 3px solid var(--accent); max-width: 760px; }
+  .quote blockquote { margin: 0; }
+  .quote p { font-family: var(--font-serif); font-size: clamp(1.5rem, 2.4vw, 1.875rem); line-height: 1.25; color: var(--ink); }
+  .quote figcaption { margin-top: var(--s-4); color: var(--ink-3); }
+  .quote figcaption strong { color: var(--ink); font-weight: 600; }
+</style>
